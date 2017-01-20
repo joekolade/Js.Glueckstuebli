@@ -15,7 +15,7 @@ page = TYPO3.Neos:Page {
 	}
 
 	body {
-		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Default.html'
+		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 		sectionName = 'body'
 		parts {
 			menu = TYPO3.Neos:Menu

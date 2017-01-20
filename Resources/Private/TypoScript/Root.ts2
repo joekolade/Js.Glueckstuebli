@@ -17,17 +17,17 @@ page = TYPO3.Neos:Page {
 	body {
 		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 		sectionName = 'body'
-		parts {
-			menu = TYPO3.Neos:Menu
-		}
+		# parts {
+		# 	menu = TYPO3.Neos:Menu
+		# }
 
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
-		content {
-			// The default content section
-			main = TYPO3.Neos:PrimaryContent {
-				nodePath = 'main'
-			}
-		}
+		# content {
+		# 	// The default content section
+		# 	main = TYPO3.Neos:PrimaryContent {
+		# 		nodePath = 'main'
+		# 	}
+		# }
 
 		javascripts.site = TYPO3.TypoScript:Template {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'

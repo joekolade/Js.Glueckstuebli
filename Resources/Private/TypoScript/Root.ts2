@@ -4,14 +4,14 @@
 page = TYPO3.Neos:Page {
 	head {
 		stylesheets.site = TYPO3.TypoScript:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Default.html'
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 			sectionName = 'stylesheets'
 		}
 
-		javascripts.site = TYPO3.TypoScript:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Default.html'
-			sectionName = 'headScripts'
-		}
+		# javascripts.site = TYPO3.TypoScript:Template {
+		# 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+		# 	sectionName = 'headScripts'
+		# }
 	}
 
 	body {
@@ -30,7 +30,7 @@ page = TYPO3.Neos:Page {
 		}
 
 		javascripts.site = TYPO3.TypoScript:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Default.html'
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 			sectionName = 'bodyScripts'
 		}
 	}

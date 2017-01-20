@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-{namespace neos=TYPO3\Neos\ViewHelpers}
-{namespace ts=TYPO3\TypoScript\ViewHelpers}
-{namespace media=TYPO3\Media\ViewHelpers}
+<!DOCTYPE html> {namespace neos=TYPO3\Neos\ViewHelpers} {namespace ts=TYPO3\TypoScript\ViewHelpers} {namespace media=TYPO3\Media\ViewHelpers}
 <html>
 
 <head>
@@ -9,32 +6,35 @@
     <title>Glücksstübli</title>
     <meta name=description content="">
     <meta name=viewport content="width=device-width,initial-scale=1">
-    <!--
-    <link rel="shortcut icon" href=/favicon.b25e58c4.ico>
-    <link rel=apple-touch-icon href=/apple-touch-icon.9727d3c2.png>
-    Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <f:section name="stylesheets">
+        <link rel=stylesheet href={f:uri.resource(path: 'Styles/vendor.81ce96f2.css', package: 'Js.Glueckstuebli')} />
+        <link rel=stylesheet href={f:uri.resource(path: 'Styles/main.8e5bc74e.css', package: 'Js.Glueckstuebli')}>
+    </f:section>
+</head>
 
-    <link rel=stylesheet href={f:uri.resource(path: 'Styles/vendor.81ce96f2.css', package: 'Js.Glueckstuebli')} />
-    <link rel=stylesheet href={f:uri.resource(path: 'Styles/main.8e5bc74e.css', package: 'Js.Glueckstuebli')} >
-
-    <body>
-        <!--[if lt IE 10]>
+<body>
+    <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-        <div class=container>
-            <div class="jumbotron wald">
-                <h1>GlücksStübli</h1>
-                <p class=lead> <b>Schwarzwaldladen für das Besondere</b> </p>
-                <p class="ledger small"> Schlosshofweg 2
-                    <br> 79215 Elzach
-                    <br> <i class="fa fa-phone"></i> Telefon: 0762 909 186
-                    <br> <i class="fa fa-mobile"></i> Handy: 0178 615 42 03 </p>
-                <p><a class="btn btn-primary" href=mailto:info@gluecksstuebli.de><i class="fa fa-envelope-o"></i> info@gluecksstuebli.de</a></p>
-            </div>
-            <div class=footer>
-                <p> GlücksStübli – Schwarzwaldladen mit <i class="fa fa-heart text-primary"></i></p>
-            </div>
+    <div class=container>
+        <div class="jumbotron wald">
+            <h1>GlücksStübli</h1>
+            <p class=lead> <b>Schwarzwaldladen für das Besondere</b> </p>
+            <p class="ledger small"> Schlosshofweg 2
+                <br> 79215 Elzach
+                <br> <i class="fa fa-phone"></i> Telefon: 0762 909 186
+                <br> <i class="fa fa-mobile"></i> Handy: 0178 615 42 03 </p>
+            <p><a class="btn btn-primary" href=mailto:info@gluecksstuebli.de><i class="fa fa-envelope-o"></i> info@gluecksstuebli.de</a></p>
         </div>
+        <div class=footer>
+            <p> GlücksStübli – Schwarzwaldladen mit <i class="fa fa-heart text-primary"></i></p>
+        </div>
+    </div>
+    <f:section name="bodyScripts">
         <script src={f:uri.resource(path: 'JavaScript/vendor.e4428189.js', package: 'Js.Glueckstuebli')}></script>
         <script src={f:uri.resource(path: 'JavaScript/plugins.7e995323.js', package: 'Js.Glueckstuebli')}></script>
         <script src={f:uri.resource(path: 'JavaScript/main.dbf075c8.js', package: 'Js.Glueckstuebli')}></script>
+    </f:section>
+</body>
+
+</html>

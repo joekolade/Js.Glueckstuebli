@@ -7,6 +7,10 @@ page = TYPO3.Neos:Page {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 			sectionName = 'stylesheets'
 		}
+		favicons.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+			sectionName = 'favicons'
+		}
 
 		# javascripts.site = TYPO3.TypoScript:Template {
 		# 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'

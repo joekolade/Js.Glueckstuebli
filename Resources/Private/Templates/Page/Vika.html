@@ -49,15 +49,15 @@
                     Mehr erfahren Sie auch hier: <a href="http://www.s-fleckli.de">www.s-fleckli.de</a>
                 </p>
             </div>
-            <div class=footer>
+            <nav class="menu">
+                {parts.menu -> f:format.raw()}
+            </nav>
+            <div class="container content">
+                {content.main -> f:format.raw()}
+            </div>
+            <div class="footer">
                 <p> GlücksStübli – Schwarzwaldladen mit <i class="fa fa-heart text-primary"></i></p>
             </div>
-        </div>
-        <nav class="menu">
-            {parts.menu -> f:format.raw()}
-        </nav>
-        <div class="content">
-            {content.main -> f:format.raw()}
         </div>
     </f:section>
     <f:section name="bodyScripts">

@@ -17,16 +17,20 @@ page = Neos.Neos:Page {
 	body {
 		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 		sectionName = 'body'
+
+
 		# parts {
 		# 	menu = Neos.Neos:Menu
 		# }
 
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
 		content {
+			madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
 			// The default content section
 			main = Neos.Neos:PrimaryContent {
 				nodePath = 'main'
 			}
+
 		}
 
 		javascripts.site = Neos.Fusion:Template {

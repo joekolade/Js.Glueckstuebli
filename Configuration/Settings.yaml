@@ -2,12 +2,12 @@
 # Resizimg für Bilder
 # Settings.yaml
 #
-TYPO3:
+Neos:
   Neos:
     userInterface:
       inspector:
         dataTypes:
-          'TYPO3\Media\Domain\Model\ImageInterface':
+          'Neos\Media\Domain\Model\ImageInterface':
             editorOptions:
               features:
                 resize: TRUE

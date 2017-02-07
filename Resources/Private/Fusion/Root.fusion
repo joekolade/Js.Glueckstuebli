@@ -26,6 +26,7 @@ page = Neos.Neos:Page {
 		// These are your content areas, you can define as many as you want, just name them and the nodePath.
 		content {
 			madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
+			claim = ${Configuration.setting('Js.Glueckstuebli.claim')}
 			// The default content section
 			main = Neos.Neos:PrimaryContent {
 				nodePath = 'main'

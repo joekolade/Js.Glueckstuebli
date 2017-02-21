@@ -1,7 +1,15 @@
 /**
  * Root TypoScript template for the Glückstübli site
  */
-page = Neos.Neos:Page {
+
+root {
+	default {
+		type = ${q(node).property('_nodeType') + '.Document'}
+		renderPath >
+	}
+}
+
+prototype(Neos.Neos:Page.Document) < prototype(Neos.Neos:Page) {
 	head {
 		stylesheets.site = Neos.Fusion:Template {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'

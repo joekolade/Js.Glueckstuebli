@@ -16,8 +16,11 @@ page = Page {
 
 		meta = Neos.Fusion:Template {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
-			sectionName = 'meta'
-		}
+            sectionName = 'meta'
+
+            // Viewport tag content
+            viewport = "width=device-width, initial-scale=1"
+        }
 
 		stylesheets.site = Neos.Fusion:Template {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'

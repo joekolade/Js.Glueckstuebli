@@ -9,7 +9,9 @@ root {
 	}
 }
 
-prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.NodeTypes:Page) {
+prototype(Neos.Neos.NodeTypes:Page.Document) < prototype(Neos.Neos.NodeTypes:Page) {
+	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+
 	head {
 
 		meta.site = Neos.Fusion:Template {

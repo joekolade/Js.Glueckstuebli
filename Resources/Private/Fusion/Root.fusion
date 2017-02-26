@@ -9,7 +9,7 @@ root {
 	}
 }
 
-prototype(Neos.Neos:Page.Document) < prototype(Neos.Neos:Page) {
+prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.NodeTypes:Page) {
 	head {
 
 		meta.site = Neos.Fusion:Template {

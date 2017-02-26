@@ -14,7 +14,7 @@ page = Page {
 
 	head {
 
-		meta = Neos.Fusion:Template {
+		meta.site = Neos.Fusion:Template {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
             sectionName = 'meta'
 

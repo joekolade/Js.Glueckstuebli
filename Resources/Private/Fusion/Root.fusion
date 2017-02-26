@@ -2,14 +2,15 @@
  * Root TypoScript template for the Glückstübli site
  */
 
-root {
-	default {
-		type = ${q(node).property('_nodeType') + '.Document'}
-		renderPath >
-	}
-}
+# root {
+# 	default {
+# 		type = ${q(node).property('_nodeType') + '.Document'}
+# 		renderPath >
+# 	}
+# }
 
-prototype(Neos.Neos.NodeTypes:Page.Document) < prototype(Neos.Neos.NodeTypes:Page) {
+#prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.NodeTypes:Page) {
+page = Page {
 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 
 	head {

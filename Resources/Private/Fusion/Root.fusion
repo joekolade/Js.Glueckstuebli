@@ -11,6 +11,12 @@ root {
 
 prototype(Neos.Neos:Page.Document) < prototype(Neos.Neos:Page) {
 	head {
+
+		meta = Neos.Fusion:Template {
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+			sectionName = 'meta'
+		}
+
 		stylesheets.site = Neos.Fusion:Template {
 			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
 			sectionName = 'stylesheets'

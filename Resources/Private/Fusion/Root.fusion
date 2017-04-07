@@ -2,68 +2,69 @@
  * Root TypoScript template for the Glückstübli site
  */
 
-root {
-	default {
-		type = ${q(node).property('_nodeType') + '.Document'}
-		renderPath >
-	}
-}
+//root {
+//    default {
+//        type = ${q(node).property('_nodeType') + '.Document'}
+//        renderPath >
+//    }
+//}
 
-prototype(Neos.NodeTypes:Page.Document) < prototype(Page)
-prototype(Neos.NodeTypes:Page.Document) {
+//prototype(Neos.NodeTypes:Page.Document) < prototype(Page)
+//prototype(Neos.NodeTypes:Page.Document) {
+page = Page
+page {
+    head {
 
-	head {
+        meta = Neos.Fusion:Template {
+            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+            sectionName = 'meta'
 
-		meta = Neos.Fusion:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-			sectionName = 'meta'
+            #@position.before = "stylesheets"
+        }
 
-			#@position.before = "stylesheets"
-		}
+        stylesheets.site = Neos.Fusion:Template {
+            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+            sectionName = 'stylesheets'
+        }
 
-		stylesheets.site = Neos.Fusion:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-			sectionName = 'stylesheets'
-		}
+        # javascripts.site = Neos.Fusion:Template {
+        # 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+        # 	sectionName = 'headScripts'
+        # }
+    }
 
-		# javascripts.site = Neos.Fusion:Template {
-		# 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
-		# 	sectionName = 'headScripts'
-		# }
-	}
-
-	body {
-		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-		sectionName = 'body'
+    body {
+        templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+        sectionName = 'body'
 
 
-		# parts {
-		# 	menu = Neos.Neos:Menu
-		# }
+        # parts {
+        # 	menu = Neos.Neos:Menu
+        # }
 
-		// These are your content areas, you can define as many as you want, just name them and the nodePath.
-		content {
-			madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
-			claim = ${Configuration.setting('Js.Glueckstuebli.claim')}
+        // These are your content areas, you can define as many as you want, just name them and the nodePath.
+        content {
+            madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
+            claim = ${Configuration.setting('Js.Glueckstuebli.claim')}
 
-			// The default content section
-			main = Neos.Neos:PrimaryContent {
-				nodePath = 'main'
-			}
+            // The default content section
+            main = Neos.Neos:PrimaryContent {
+                nodePath = 'main'
+            }
 
-		}
+        }
 
-		javascripts.site = Neos.Fusion:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-			sectionName = 'bodyScripts'
-		}
-	}
+        javascripts.site = Neos.Fusion:Template {
+            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+            sectionName = 'bodyScripts'
+        }
+    }
 }
 
 prototype(Js.Glueckstuebli:Page.Document) < prototype(Neos.NodeTypes:Page.Document)
 prototype(Js.Glueckstuebli:Page.Document) {
-	body {
-		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
-		parts.menu >
-	}
+    body {
+        templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
+        parts.menu >
+    }
 }

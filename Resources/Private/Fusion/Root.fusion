@@ -2,17 +2,17 @@
  * Root TypoScript template for the Glückstübli site
  */
 
-//root {
-//    default {
-//        type = ${q(node).property('_nodeType') + '.Document'}
-//        renderPath >
-//    }
-//}
+root {
+    default {
+        type = ${q(node).property('_nodeType') + '.Document'}
+        renderPath >
+    }
+}
 
-//prototype(Neos.NodeTypes:Page.Document) < prototype(Page)
-//prototype(Neos.NodeTypes:Page.Document) {
-page = Page
-page {
+prototype(Neos.NodeTypes:Page.Document) < prototype(Page)
+prototype(Neos.NodeTypes:Page.Document) {
+//page = Page
+//page {
     head {
 
         meta = Neos.Fusion:Template {

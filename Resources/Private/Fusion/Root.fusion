@@ -2,25 +2,27 @@
  * Root TypoScript template for the Glückstübli site
  */
 
-# root {
-# 	default {
-# 		type = ${q(node).property('_nodeType') + '.Document'}
-# 		renderPath >
-# 	}
-# }
+root {
+	default {
+		type = ${q(node).property('_nodeType') + '.Document'}
+		renderPath >
+	}
+}
 
-#prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.NodeTypes:Page) {
-page = Page {
+prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.NodeTypes:Page)
+prototype(Neos.NodeTypes:Page.Document) {
 
 	head {
 
 		meta = Neos.Fusion:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
 			sectionName = 'meta'
+
+			#@position.before = "stylesheets"
 		}
 
 		stylesheets.site = Neos.Fusion:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
 			sectionName = 'stylesheets'
 		}
 
@@ -31,7 +33,7 @@ page = Page {
 	}
 
 	body {
-		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
 		sectionName = 'body'
 
 
@@ -43,6 +45,7 @@ page = Page {
 		content {
 			madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
 			claim = ${Configuration.setting('Js.Glueckstuebli.claim')}
+
 			// The default content section
 			main = Neos.Neos:PrimaryContent {
 				nodePath = 'main'
@@ -51,8 +54,16 @@ page = Page {
 		}
 
 		javascripts.site = Neos.Fusion:Template {
-			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+			templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
 			sectionName = 'bodyScripts'
 		}
+	}
+}
+
+prototype(Js.Glueckstuebli:Page.Document) < prototype(Neos.NodeTypes:Page.Document)
+prototype(Js.Glueckstuebli:Page.Document) {
+	body {
+		templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
+		parts.menu >
 	}
 }

@@ -6,3 +6,54 @@
 #  childNodes:
 #    'sidebar':
 #      type: 'Neos.Neos:ContentCollection'
+
+
+# Page
+# 'Neos.NodeTypes:Page'
+
+# Startseite
+'Js.Glueckstuebli:StartPage':
+  superTypes:
+    'Neos.NodeTypes:Page': true
+  childNodes:
+    'intro':
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Text': true
+          '*': false
+    'footer':
+      constraints:
+        nodeTypes:
+          'Neos.NodeTypes:Text': true
+          '*': false
+  ui:
+    label: 'Start-Seite'
+    group: 'general'
+    icon: 'icon-columns'
+    inspector:
+      groups:
+        js:
+          label: 'Startseiten-Daten'
+          icon: 'icon-anchor'
+          position: 1
+  properties:
+    'email':
+      type: string
+      ui:
+        label: 'E-Mail'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'js'
+    'claim':
+      type: string
+      ui:
+        label: 'Claim'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'js'
+    piwikid:
+      type: string
+      ui:
+        label: 'Piwik Site-Id'
+        inspector:
+          group: 'js'

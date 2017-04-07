@@ -9,12 +9,21 @@
 
 
 # Page
-# 'Neos.NodeTypes:Page'
+'Neos.NodeTypes:Page':
+  constraints:
+    nodeTypes:
+      'Neos.NodeTypes:Page': true
+      'Js.Glueckstuebli:StartPage': false
+
 
 # Startseite
 'Js.Glueckstuebli:StartPage':
   superTypes:
     'Neos.NodeTypes:Page': true
+  constraints:
+    nodeTypes:
+      'Neos.NodeTypes:Page': true
+      'Js.Glueckstuebli:StartPage': false
   childNodes:
     'intro':
       constraints:

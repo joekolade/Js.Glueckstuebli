@@ -39,7 +39,7 @@ prototype(Neos.NodeTypes:Page.Document) {
 
 
         parts {
-            email = ${q(site).propery('email')}
+            email = ${q(site).property('email')}
             # 	menu = Neos.Neos:Menu
         }
 

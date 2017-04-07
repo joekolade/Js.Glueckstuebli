@@ -70,7 +70,6 @@ prototype(Js.Glueckstuebli:StartPage.Document) {
     }
 
     body {
-        content.madhat = 'Hut'
         templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
         #parts.menu >
 

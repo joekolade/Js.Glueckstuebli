@@ -60,14 +60,6 @@
             <div class="jumbotron wald">
                 <h1>GlücksStübli</h1>
                 <p class=lead> <b>Schwarzwaldladen für das Besondere</b> </p>
-                <p class="ledger small"> Schlosshofweg 2
-                    <br> 79215 Elzach
-                    <br> <i class="fa fa-phone"></i> Telefon: 0762 909 186
-                    <br> <i class="fa fa-mobile"></i> Handy: 0178 615 42 03 </p>
-                <p><a class="btn btn-primary" href=mailto:info@gluecksstuebli.de><i class="fa fa-envelope-o"></i> info@gluecksstuebli.de</a></p>
-                <p>
-                    Mehr erfahren Sie auch hier: <a href="http://www.s-fleckli.de">www.s-fleckli.de</a>
-                </p>
             </div>
             <nav class="menu">
                 {parts.menu -> f:format.raw()}
@@ -75,6 +67,9 @@
             <div class="container content ledger">
                 {content.main -> f:format.raw()}
             </div>
+
+            <p><a class="btn btn-primary" href=mailto:info@gluecksstuebli.de><i class="fa fa-envelope-o"></i> info@gluecksstuebli.de</a></p>
+
             <div class="footer">
                 <p>
                     {content.claim -> f:format.raw()}

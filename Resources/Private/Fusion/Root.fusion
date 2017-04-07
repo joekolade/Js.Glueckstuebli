@@ -38,9 +38,10 @@ prototype(Neos.NodeTypes:Page.Document) {
         sectionName = 'body'
 
 
-        # parts {
-        # 	menu = Neos.Neos:Menu
-        # }
+        parts {
+            email = ${q(site).propery('email')}
+            # 	menu = Neos.Neos:Menu
+        }
 
         // These are your content areas, you can define as many as you want, just name them and the nodePath.
         content {

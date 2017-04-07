@@ -66,6 +66,6 @@ prototype(Js.Glueckstuebli:StartPage.Document) < prototype(Neos.NodeTypes:Page.D
 prototype(Js.Glueckstuebli:StartPage.Document) {
     body {
         templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
-        parts.menu >
+        #parts.menu >
     }
 }

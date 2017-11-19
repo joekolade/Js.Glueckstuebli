@@ -41,7 +41,22 @@ prototype(Neos.NodeTypes:Page.Document) {
         parts {
             claim = ${q(site).property('claim')}
             email = ${q(site).property('email')}
-            # 	menu = Neos.Neos:Menu
+
+            menu = Neos.Neos:Menu {
+                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/MainMenu.html'
+                #entryLevel = 2
+                maximumLevels = 1
+            }
+            togglemenu = Js.TherapieOx:Menu {
+                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/ToggleMenu.html'
+                #entryLevel = 1
+                maximumLevels = 3
+            }
+
+            mobilemenu = Js.TherapieOx:Menu {
+                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/MobileMenu.html'
+                maximumLevels = 3
+            }
         }
 
         // These are your content areas, you can define as many as you want, just name them and the nodePath.

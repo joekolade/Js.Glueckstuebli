@@ -1,0 +1,17 @@
+.mad-hatter {
+  position: absolute;
+  max-width: 20vw;
+  top: -15px;
+  right: 5px;
+  .hat {
+    fill: $color-red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+ .mad-hatter {
+   max-width: 10vw;
+   top: -1vw;
+   right: -5px;
+ }
+}

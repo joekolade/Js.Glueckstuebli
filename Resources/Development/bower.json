@@ -1,13 +1,21 @@
 {
-  "name": "template",
+  "name": "elavon-template",
   "private": true,
   "dependencies": {
-    "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
-    "jquery": "~2.1.4",
-    "components-font-awesome": "~4.4"
+    "bootstrap-sass": "~3.3.5",
+    "modernizr": "~2.8.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.1.2"
   }
 }

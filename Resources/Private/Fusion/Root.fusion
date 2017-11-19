@@ -50,11 +50,6 @@ prototype(Neos.NodeTypes:Page.Document) {
                     class= "nav"
                 }
             }
-            togglemenu = Neos.Neos:Menu {
-                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/ToggleMenu.html'
-                #entryLevel = 1
-                maximumLevels = 3
-            }
 
             mobilemenu = Neos.Neos:Menu {
                 templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/MobileMenu.html'

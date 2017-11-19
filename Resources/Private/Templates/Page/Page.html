@@ -51,7 +51,33 @@
         <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class=container>
+        <div class="wrapper">
+            <div class="container">
+                <a href="#" class="menu-toggle">
+                    <i class="fa fa-bars"></i> <span>Navigation</span>
+                </a>
+
+                <nav>
+                    {parts.menu -> f:format.raw()}
+                    <!--
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    -->
+                </nav>
+            </div>
+            <div class=container>
 
             <div class="mad-hatter">
                 {content.madhat -> f:format.raw()}
@@ -75,6 +101,25 @@
                     {content.claim -> f:format.raw()}
                     <br class="hidden-md-up">
                     GlücksStübli – Schwarzwaldladen mit <i class="fa fa-heart text-primary"></i></p>
+            </div>
+        </div>
+        </div>
+
+        <div class=mobile-menu>
+            <div class=menu-background style="cursor: pointer"></div>
+            <div class=app-menu-container>
+                <div class=app-menu>
+                    <div class=top>
+                        <div class="top-overlay logo-wrapper">
+                            <a href="/" title="zurück zur Startseite" rel="nofollow">{svglogo -> f:format.raw()}</a>
+                        </div>
+                    </div>
+                    <div class=bottom>
+
+                        {parts.mobilemenu -> f:format.raw()}
+
+                    </div>
+                </div>
             </div>
         </div>
     </f:section>

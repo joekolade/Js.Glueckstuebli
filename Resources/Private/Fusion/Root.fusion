@@ -43,9 +43,12 @@ prototype(Neos.NodeTypes:Page.Document) {
             email = ${q(site).property('email')}
 
             menu = Neos.Neos:Menu {
-                #templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/Menu.html'
+                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/Menu.html'
                 #entryLevel = 2
                 maximumLevels = 1
+                attributes {
+                    class= "nav"
+                }
             }
             togglemenu = Neos.Neos:Menu {
                 templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/ToggleMenu.html'

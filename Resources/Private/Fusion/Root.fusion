@@ -61,6 +61,8 @@ prototype(Neos.NodeTypes:Page.Document) {
             }
         }
 
+        svglogo = "<a href='/'><h1>GlücksStübli</h1></a>"
+
         // These are your content areas, you can define as many as you want, just name them and the nodePath.
         content {
             madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}

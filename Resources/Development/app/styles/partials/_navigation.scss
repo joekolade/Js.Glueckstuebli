@@ -23,12 +23,16 @@ ul.nav li,
 
   &.current,
   &.active {
-	color: $color-red;
+	a {
+		color: $color-red;
+	}
   }
 
   &:hover {
-	background: $primary;
-	color: white;
+	a {
+	  color: white;
+	  background: $primary;
+	}
   }
 
 }

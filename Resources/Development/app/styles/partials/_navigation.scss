@@ -17,9 +17,11 @@
   display: none;
 }
 
+ul.nav li,
 .nav-link {
   color: $color-black;
 
+  &.current,
   &.active {
 	color: $color-red;
   }

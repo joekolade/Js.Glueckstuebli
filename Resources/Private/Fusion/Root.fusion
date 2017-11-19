@@ -54,6 +54,10 @@ prototype(Neos.NodeTypes:Page.Document) {
             mobilemenu = Neos.Neos:Menu {
                 templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/MobileMenu.html'
                 maximumLevels = 3
+
+                attributes {
+                    class = "nav flex-column"
+                }
             }
         }
 

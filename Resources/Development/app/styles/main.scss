@@ -15,6 +15,8 @@ $fa-font-path: "../bower_components/components-font-awesome/fonts";
 // endbower
 
 @import "partials/hatter";
+@import "partials/js_gesture_menu";
+@import "partials/navigation";
 
 .browsehappy {
   margin: 0.2em 0;
@@ -29,25 +31,8 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+.container {
+  position: relative;
 }
 
 /* Custom page footer */
@@ -65,32 +50,17 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+
   .btn {
     font-size: 21px;
     padding: 14px 24px;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+    //max-width: 730px;
   }
 
   /* Space out the masthead */

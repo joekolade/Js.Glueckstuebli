@@ -1,0 +1,42 @@
+// Navigation
+//
+
+.menu-toggle {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+	margin-bottom: 0.4em;
+
+  i	 {
+	font-size: 1.2em;
+	margin-right: 0.4em;
+  }
+}
+
+.container > nav {
+  display: none;
+}
+
+.nav-link {
+  color: $color-black;
+
+  &.active {
+	color: $color-red;
+  }
+
+  &:hover {
+	background: $primary;
+	color: white;
+  }
+
+}
+
+@include media-breakpoint-up(md) {
+  .menu-toggle {
+	display: none;
+  }
+
+  .container > nav {
+	display: block;
+  }
+}

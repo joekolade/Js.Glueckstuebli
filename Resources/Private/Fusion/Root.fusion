@@ -47,13 +47,13 @@ prototype(Neos.NodeTypes:Page.Document) {
                 #entryLevel = 2
                 maximumLevels = 1
             }
-            togglemenu = Js.TherapieOx:Menu {
+            togglemenu = Neos.Neos:Menu {
                 templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/ToggleMenu.html'
                 #entryLevel = 1
                 maximumLevels = 3
             }
 
-            mobilemenu = Js.TherapieOx:Menu {
+            mobilemenu = Neos.Neos:Menu {
                 templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/MobileMenu.html'
                 maximumLevels = 3
             }

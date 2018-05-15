@@ -76,6 +76,10 @@ prototype(Neos.NodeTypes:Page.Document) {
             impressum = Neos.Neos:NodeUri {
                 node = ${q(site).children('[uriPathSegment="service"]').get(0)}
             }
+
+            datenschutz = Neos.Neos:NodeUri {
+                node = ${q(site).children('[uriPathSegment="service"]').get(1)}
+            }
         }
 
         javascripts.site = Neos.Fusion:Template {

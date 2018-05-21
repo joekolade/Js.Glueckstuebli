@@ -11,7 +11,9 @@ Neos:
             editorOptions:
               features:
                 resize: TRUE
-
+  Flow:
+    i18n:
+      defaultLocale: de
 Js:
   Glueckstuebli:
     claim: Wer alle Lebewesen lachen hört, kann Wolken schmecken!

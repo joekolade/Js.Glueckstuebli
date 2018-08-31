@@ -1,0 +1,11 @@
+prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
+    supporterList = Neos.Fusion:Array {
+
+        list = Neos.Fusion:Collection {
+            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2017"]').find('[instanceof Js.Glueckstuebli:Supporter][showinminilist]')}
+            itemName = 'supporter'
+            itemRenderer = ${q(supporter).property('title') + ' / '}
+        }
+
+    }
+}

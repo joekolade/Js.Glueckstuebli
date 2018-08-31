@@ -2,6 +2,10 @@
  * Root TypoScript template for the Glückstübli site
  */
 
+## Include all .fusion files in NodeTypes
+include: NodeTypes/*
+
+
 root {
     default {
         type = ${q(node).property('_nodeType') + '.Document'}
@@ -104,32 +108,3 @@ prototype(Js.Glueckstuebli:StartPage.Document) {
     }
 }
 
-prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Document) {
-    templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Supporter.html'
-    title = ${q(node).property('title')}
-    ortprefix = ${q(node).property('ortprefix')}
-    ort = ${q(node).property('ort')}
-    website = ${q(node).property('website')}
-}
-
-
-prototype(Js.Glueckstuebli:SupporterMiniList) < prototype(Neos.Neos:Content) {
-    supporter = Neos.Fusion:Array {
-
-        intro_since2017 = '<b>Dabei seit 2017:</b> '
-        since2017 = Neos.Fusion:Collection {
-            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2017"]').find('[instanceof Js.Glueckstuebli:Supporter][showinminilist]')}
-            itemName = 'supporter'
-            itemRenderer = ${q(supporter).property('title') + ' / '}
-        }
-
-        break = '<br>'
-
-        intro_since2018 = '<b>Dabei seit 2018:</b> '
-        since2018 = Neos.Fusion:Collection {
-            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2018"]').find('[instanceof Js.Glueckstuebli:Supporter][showinminilist]')}
-            itemName = 'supporter'
-            itemRenderer = ${q(supporter).property('title') + ' / '}
-        }
-    }
-}

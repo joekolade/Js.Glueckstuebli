@@ -105,5 +105,5 @@ prototype(Js.Glueckstuebli:StartPage.Document) {
 }
 
 prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Document) {
-
+    templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Supporter.html'
 }

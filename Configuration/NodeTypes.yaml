@@ -76,7 +76,26 @@
     icon: 'icon-life-ring'
     inspector:
       groups:
-        js:
+        supporter:
           label: 'Unterstützer-Daten'
           icon: 'icon-anchor'
           position: 1
+  properties:
+    'website':
+      type: string
+      ui:
+        label: 'Website'
+        inspector:
+          group: 'supporter'
+    'ort':
+      type: string
+      ui:
+        label: 'Ortsbezeichnung'
+        inspector:
+          group: 'supporter'
+    'ortprefix':
+      type: string
+      ui:
+        label: 'in/auf der/...'
+        inspector:
+          group: 'supporter'

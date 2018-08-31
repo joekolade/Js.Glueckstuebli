@@ -13,4 +13,21 @@ prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
 
         }
     }
+    @cache {
+        mode = 'cached'
+
+        maximumLifetime = '86400'
+
+        entryIdentifier {
+            node = ${node}
+            editPreviewMode = ${node.context.currentRenderingMode.name}
+        }
+
+        entryTags {
+            # Whenever the node changes the matched condition could change
+                        1 = ${Neos.Caching.nodeTag(documentNode)}
+            # Whenever one of the parent nodes changes the layout could change
+                        2 = ${Neos.Caching.descendantOfTag(documentNode)}
+        }
+    }
 }

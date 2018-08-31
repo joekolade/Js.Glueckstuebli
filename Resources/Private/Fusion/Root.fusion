@@ -86,6 +86,7 @@ prototype(Neos.NodeTypes:Page.Document) {
 
                 2017 = Neos.Fusion:Collection {
                     items = ${q(site).find('[instanceof Js.Glueckstuebli:Supporter]')}
+                    items = ${[1, 2, 3]}
                     itemName = 'supporter'
                     itemRenderer = ${'- ' + supporter.title}
                 }

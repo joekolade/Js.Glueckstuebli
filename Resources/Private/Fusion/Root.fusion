@@ -80,26 +80,6 @@ prototype(Neos.NodeTypes:Page.Document) {
             datenschutz = Neos.Neos:NodeUri {
                 node = ${q(site).children('[uriPathSegment="service"]').get(1)}
             }
-
-            supporter = Neos.Fusion:Array {
-                intro = 'Unsere Unterstützer:'
-
-                intro_since2017 = '<b>Dabei seit 2017:</b> '
-                since2017 = Neos.Fusion:Collection {
-                    collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2017"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
-                    itemName = 'supporter'
-                    itemRenderer = ${q(supporter).property('title') + ' / '}
-                }
-
-                break = '<br>'
-
-                intro_since2018 = '<b>Dabei seit 2018:</b> '
-                since2018 = Neos.Fusion:Collection {
-                    collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2018"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
-                    itemName = 'supporter'
-                    itemRenderer = ${q(supporter).property('title') + ' / '}
-                }
-            }
         }
 
         javascripts.site = Neos.Fusion:Template {
@@ -126,4 +106,27 @@ prototype(Js.Glueckstuebli:StartPage.Document) {
 
 prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Document) {
     templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Supporter.html'
+}
+
+
+prototype(Js.Glueckstuebli:SupporterMiniList) < prototype(Neos.Neos:Content) {
+    supporter = Neos.Fusion:Array {
+        intro = 'Unsere Unterstützer:'
+
+        intro_since2017 = '<b>Dabei seit 2017:</b> '
+        since2017 = Neos.Fusion:Collection {
+            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2017"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
+            itemName = 'supporter'
+            itemRenderer = ${q(supporter).property('title') + ' / '}
+        }
+
+        break = '<br>'
+
+        intro_since2018 = '<b>Dabei seit 2018:</b> '
+        since2018 = Neos.Fusion:Collection {
+            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2018"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
+            itemName = 'supporter'
+            itemRenderer = ${q(supporter).property('title') + ' / '}
+        }
+    }
 }

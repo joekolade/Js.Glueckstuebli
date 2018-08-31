@@ -82,6 +82,8 @@ prototype(Neos.NodeTypes:Page.Document) {
             }
 
             supporter = Neos.Fusion:Array {
+                intro = 'Unsere Unterstützer:'
+
                 2017 = Neos.Fusion:Collection {
                     items = ${q(site).find(['instanceOf Js.Glueckstuebli:Supporter'])}
                     itemName = 'supporter'

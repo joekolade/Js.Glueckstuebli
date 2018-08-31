@@ -14,8 +14,6 @@
     nodeTypes:
       'Neos.NodeTypes:Page': true
       'Js.Glueckstuebli:StartPage': false
-      'Js.Glueckstuebli:Supporter': false
-
 
 # Startseite
 'Js.Glueckstuebli:StartPage':

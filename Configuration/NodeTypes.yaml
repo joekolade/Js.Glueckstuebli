@@ -115,48 +115,78 @@
       defaultValue: '... intro ...'
       ui:
         inlineEditable: TRUE
-        aloha:
-          'format':
-            'b': TRUE
-            'i': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'p': TRUE
-            'h1': TRUE
-            'h2': TRUE
-            'h3': TRUE
-            'pre': FALSE
-            'removeFormat': FALSE
-          'table':
-            'table': FALSE
-          'list':
-            'ol': FALSE
-            'ul': FALSE
-          'link':
-            'a': TRUE
+        inline:
+          editorOptions:
+            placeholder: i18n
+            autoparagraph: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: false
+              sub: false
+              sup: false
+              del: false
+              p: true
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: false
+              h6: false
+              pre: false
+              underline: false
+              strikethrough: false
+              removeFormat: false
+              left: false
+              right: false
+              center: false
+              justify: false
+              table: false
+              ol: false
+              ul: false
+              a: true
     outro:
       type: string
       defaultValue: '... Outro ...'
       ui:
         inlineEditable: TRUE
-        aloha:
-          'format':
-            'b': TRUE
-            'i': TRUE
-            'u': FALSE
-            'sub': FALSE
-            'sup': FALSE
-            'p': TRUE
-            'h1': TRUE
-            'h2': TRUE
-            'h3': TRUE
-            'pre': FALSE
-            'removeFormat': FALSE
-          'table':
-            'table': FALSE
-          'list':
-            'ol': FALSE
-            'ul': FALSE
-          'link':
-            'a': TRUE
+        inline:
+          editorOptions:
+            placeholder: i18n
+            autoparagraph: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: false
+              sub: false
+              sup: false
+              del: false
+              p: true
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: false
+              h6: false
+              pre: false
+              underline: false
+              strikethrough: false
+              removeFormat: false
+              left: false
+              right: false
+              center: false
+              justify: false
+              table: false
+              ol: false
+              ul: false
+              a: true

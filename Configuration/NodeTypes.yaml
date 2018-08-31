@@ -66,3 +66,8 @@
         label: 'Piwik Site-Id'
         inspector:
           group: 'js'
+
+# Unterstützer
+'Js.Glueckstuebli:Supporter':
+  superTypes:
+    'Neos.NodeTypes:Document': true

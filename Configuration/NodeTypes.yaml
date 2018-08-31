@@ -81,12 +81,6 @@
           icon: 'icon-life-ring'
           position: 1
   properties:
-    'name':
-      type: string
-      ui:
-        label: 'Name'
-        inspector:
-          group: 'supporter'
     'website':
       type: string
       ui:

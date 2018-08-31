@@ -5,7 +5,7 @@ prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
             collection = ${q(site).find('[instanceof Js.Glueckstuebli:Supporter]')}
             itemName = 'supporter'
             itemRenderer = Neos.Fusion:Template {
-                templatePath = 'resource://Js.Glueckstuebli/Private/FusionObjects/SupporterListItem.html'
+                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/SupporterListItem.html'
                 supporter = ${supporter}
             }
         }

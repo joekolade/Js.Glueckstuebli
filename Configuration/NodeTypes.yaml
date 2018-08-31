@@ -7,6 +7,11 @@
 #    'sidebar':
 #      type: 'Neos.Neos:ContentCollection'
 
+# Shortcut
+'Neos.Neos:Shortcut':
+  constraints:
+    nodeTypes:
+      'Js.Glueckstuebli:Supporter': true
 
 # Page
 'Neos.NodeTypes:Page':
@@ -14,6 +19,7 @@
     nodeTypes:
       'Neos.NodeTypes:Page': true
       'Js.Glueckstuebli:StartPage': false
+      'Js.Glueckstuebli:Supporter': false
 
 # Startseite
 'Js.Glueckstuebli:StartPage':

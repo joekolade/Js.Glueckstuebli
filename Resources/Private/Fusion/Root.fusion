@@ -86,7 +86,7 @@ prototype(Neos.NodeTypes:Page.Document) {
 
                 intro_since2017 = '<b>Dabei seit 2017:</b> '
                 since2017 = Neos.Fusion:Collection {
-                    collection = ${q(site).find('[instanceof Neos.NodeTypes:Shortcut][title*="2017"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
+                    collection = ${q(site).find('[instanceof Neos.NodeTypes:Shortcut][title*="seit 2017"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
                     itemName = 'supporter'
                     itemRenderer = ${q(supporter).property('title') + ' / '}
                 }
@@ -95,7 +95,7 @@ prototype(Neos.NodeTypes:Page.Document) {
 
                 intro_since2018 = '<b>Dabei seit 2018:</b> '
                 since2018 = Neos.Fusion:Collection {
-                    collection = ${q(site).find('[instanceof Neos.NodeTypes:Shortcut][title*="2018"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
+                    collection = ${q(site).find('[instanceof Neos.NodeTypes:Shortcut][title*="seit 2018"]').find('[instanceof Js.Glueckstuebli:Supporter]')}
                     itemName = 'supporter'
                     itemRenderer = ${q(supporter).property('title') + ' / '}
                 }

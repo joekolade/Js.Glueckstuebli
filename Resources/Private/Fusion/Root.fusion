@@ -89,7 +89,7 @@ prototype(Neos.NodeTypes:Page.Document) {
                     collection = ${q(site).find('[instanceof Neos.NodeTypes:Shortcut]').filter('[title*="2017"]')}
                     #.find('[instanceof Js.Glueckstuebli:Supporter]')}
                     itemName = 'supporter'
-                    itemRenderer = ${q(supporter).property('title') + ' / '}
+                    itemRenderer = ${'- ' + q(supporter).property('title') + ' / '}
                 }
 
                 break = '<br>'

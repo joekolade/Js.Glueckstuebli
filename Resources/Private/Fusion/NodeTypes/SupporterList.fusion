@@ -14,7 +14,7 @@ prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
         }
     }
     @cache {
-        mode = 'cached'
+        mode = 'uncached'
 
         maximumLifetime = '86400'
 

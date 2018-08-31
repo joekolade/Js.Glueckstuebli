@@ -89,18 +89,22 @@
       defaultValue: 'in'
       ui:
         label: 'in/auf der/...'
+        inlineEditable: true
         inspector:
           group: 'supporter'
     'ort':
       type: string
       ui:
         label: 'Ortsbezeichnung'
+        defaultValue: 'Ort hier eintragen'
+        inlineEditable: true
         inspector:
           group: 'supporter'
     'website':
       type: string
       ui:
         label: 'Website'
+        placeHolder: 'Web-URL'
         inspector:
           group: 'supporter'
 

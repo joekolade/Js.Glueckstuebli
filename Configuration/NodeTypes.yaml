@@ -81,6 +81,9 @@
           icon: 'icon-life-ring'
           position: 1
   properties:
+    'title':
+      ui:
+        inlineEditable: true
     'ortprefix':
       type: string
       defaultValue: 'in'

@@ -112,13 +112,13 @@
   properties:
     text:
       type: string
-      defaultValue: 'Replace by your subheadline value ...'
+      defaultValue: '... intro ...'
       ui:
         label: 'Intro'
-        reloadIfChanged: TRUE
+        inlineEditable: TRUE
     outro:
       type: string
-      defaultValue: 'Replace by your subheadline value ...'
+      defaultValue: '... Outro ...'
       ui:
         label: 'Outro'
-        reloadIfChanged: TRUE
+        inlineEditable: TRUE

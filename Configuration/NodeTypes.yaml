@@ -18,8 +18,8 @@
   constraints:
     nodeTypes:
       'Neos.NodeTypes:Page': true
-      'Js.Glueckstuebli:StartPage': false
       'Js.Glueckstuebli:Supporter': false
+      'Js.Glueckstuebli:StartPage': false
 
 # Startseite
 'Js.Glueckstuebli:StartPage':
@@ -28,6 +28,7 @@
   constraints:
     nodeTypes:
       'Neos.NodeTypes:Page': true
+      'Js.Glueckstuebli:Supporter': false
       'Js.Glueckstuebli:StartPage': false
   childNodes:
     'intro':

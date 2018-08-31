@@ -114,11 +114,43 @@
       type: string
       defaultValue: '... intro ...'
       ui:
-        label: 'Intro'
         inlineEditable: TRUE
+        aloha:
+          'format':
+            'b': TRUE
+            'i': TRUE
+            'p': FALSE
+            'h1': TRUE
+            'h2': TRUE
+            'h3': TRUE
+            'pre': FALSE
+            'removeFormat': FALSE
+          'table':
+            'table': FALSE
+          'list':
+            'ol': FALSE
+            'ul': FALSE
+          'link':
+            'a': TRUE
     outro:
       type: string
       defaultValue: '... Outro ...'
       ui:
-        label: 'Outro'
         inlineEditable: TRUE
+        aloha:
+          'format':
+            'b': TRUE
+            'i': TRUE
+            'p': FALSE
+            'h1': TRUE
+            'h2': TRUE
+            'h3': TRUE
+            'pre': FALSE
+            'removeFormat': FALSE
+          'table':
+            'table': FALSE
+          'list':
+            'ol': FALSE
+            'ul': FALSE
+          'link':
+            'a': TRUE

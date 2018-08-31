@@ -111,6 +111,14 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'supporter'
+    showinminilist:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Zeige in Miniliste?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'supporter'
 
 # Supporter minilist
 
@@ -202,3 +210,12 @@
               ol: false
               ul: false
               a: true
+
+# Supporter List
+'Js.Glueckstuebli:SupporterList':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Unterstützer Liste'
+    group: 'general'
+    icon: 'icon-life-ring'

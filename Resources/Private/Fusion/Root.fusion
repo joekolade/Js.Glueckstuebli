@@ -80,6 +80,14 @@ prototype(Neos.NodeTypes:Page.Document) {
             datenschutz = Neos.Neos:NodeUri {
                 node = ${q(site).children('[uriPathSegment="service"]').get(1)}
             }
+
+            supporter = Neos.Fusion:Array {
+                2017 = Neos.Fusion:Collection {
+                    items = ${q(site).find(['instanceOf Js.Glueckstuebli:Supporter'])}
+                    itemName = 'supporter'
+                    itemRenderer = ${supporter.title}
+                }
+            }
         }
 
         javascripts.site = Neos.Fusion:Template {

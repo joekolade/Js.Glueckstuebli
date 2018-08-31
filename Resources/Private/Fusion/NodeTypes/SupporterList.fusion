@@ -6,7 +6,7 @@ prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
             itemName = 'supporter'
             itemRenderer = Neos.Fusion:Template {
                 templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/SupporterListItem.html'
-                supporter = ${q(supporter)}
+                supporter = ${supporter}
             }
         }
 

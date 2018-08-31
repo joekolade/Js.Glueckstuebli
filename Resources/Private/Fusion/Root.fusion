@@ -84,11 +84,12 @@ prototype(Neos.NodeTypes:Page.Document) {
             supporter = Neos.Fusion:Array {
                 intro = 'Unsere Unterstützer:'
 
-                2017 = Neos.Fusion:Collection {
-                    items = ${q(site).find('[instanceof Js.Glueckstuebli:Supporter]')}
+                since2017 = Neos.Fusion:Collection {
+                    #items = ${q(site).find('[instanceof Js.Glueckstuebli:Supporter]')}
                     items = ${[1, 2, 3]}
                     itemName = 'supporter'
-                    itemRenderer = ${'- ' + supporter.title}
+                    #itemRenderer = ${'- ' + supporter.title}
+                    itemRenderer = ${'- <br>'}
                 }
             }
         }

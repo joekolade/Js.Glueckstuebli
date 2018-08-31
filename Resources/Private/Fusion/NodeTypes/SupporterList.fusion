@@ -13,10 +13,4 @@ prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
 
         }
     }
-    @cache {
-        mode = 'uncached'
-        context {
-            1 = 'node'
-        }
-    }
 }

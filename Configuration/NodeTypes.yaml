@@ -70,4 +70,4 @@
 # Unterstützer
 'Js.Glueckstuebli:Supporter':
   superTypes:
-    'Neos.NodeTypes:Document': true
+    'Neos.Neos:Document': true

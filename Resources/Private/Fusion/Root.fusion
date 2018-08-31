@@ -103,3 +103,7 @@ prototype(Js.Glueckstuebli:StartPage.Document) {
         javascripts.site.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
     }
 }
+
+prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Neos.NodeTypes:Page.Document) {
+
+}

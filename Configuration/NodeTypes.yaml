@@ -78,7 +78,7 @@
       groups:
         supporter:
           label: 'Unterstützer-Daten'
-          icon: 'icon-anchor'
+          icon: 'icon-life-ring'
           position: 1
   properties:
     'website':

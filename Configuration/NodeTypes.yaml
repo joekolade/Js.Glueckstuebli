@@ -12,6 +12,7 @@
   constraints:
     nodeTypes:
       'Js.Glueckstuebli:Supporter': true
+      'Js.Glueckstuebli:StartPage': false
 
 # Page
 'Neos.NodeTypes:Page':

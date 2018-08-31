@@ -104,6 +104,6 @@ prototype(Js.Glueckstuebli:StartPage.Document) {
     }
 }
 
-prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Neos.NodeTypes:Page.Document) {
+prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Document) {
 
 }

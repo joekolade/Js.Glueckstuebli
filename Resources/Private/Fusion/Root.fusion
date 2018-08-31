@@ -111,7 +111,6 @@ prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Document) {
 
 prototype(Js.Glueckstuebli:SupporterMiniList) < prototype(Neos.Neos:Content) {
     supporter = Neos.Fusion:Array {
-        intro = 'Unsere Unterstützer:'
 
         intro_since2017 = '<b>Dabei seit 2017:</b> '
         since2017 = Neos.Fusion:Collection {

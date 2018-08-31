@@ -109,3 +109,14 @@
     label: 'Unterstützer Miniliste'
     group: 'general'
     icon: 'icon-life-ring'
+  properties:
+    text:
+      type: string
+      ui:
+        label: 'Intro'
+        reloadIf
+    outro:
+      type: string
+      ui:
+        label: 'Outro'
+        reloadIfChanged: TRUE

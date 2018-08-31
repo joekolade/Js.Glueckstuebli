@@ -81,10 +81,11 @@
           icon: 'icon-life-ring'
           position: 1
   properties:
-    'website':
+    'ortprefix':
       type: string
+      defaultValue: 'in'
       ui:
-        label: 'Website'
+        label: 'in/auf der/...'
         inspector:
           group: 'supporter'
     'ort':
@@ -93,11 +94,10 @@
         label: 'Ortsbezeichnung'
         inspector:
           group: 'supporter'
-    'ortprefix':
+    'website':
       type: string
-      defaultValue: 'in'
       ui:
-        label: 'in/auf der/...'
+        label: 'Website'
         inspector:
           group: 'supporter'
 

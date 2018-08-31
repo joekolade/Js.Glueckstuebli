@@ -75,7 +75,7 @@
   ui:
     label: 'Unterstützer'
     group: 'general'
-    icon: 'icon-life-ring'
+    icon: 'icon-help'
     inspector:
       groups:
         js:

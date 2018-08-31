@@ -95,6 +95,7 @@
           group: 'supporter'
     'ortprefix':
       type: string
+      defaultValue: 'in'
       ui:
         label: 'in/auf der/...'
         inspector:

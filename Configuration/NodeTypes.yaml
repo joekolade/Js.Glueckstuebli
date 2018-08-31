@@ -14,6 +14,7 @@
     nodeTypes:
       'Neos.NodeTypes:Page': true
       'Js.Glueckstuebli:StartPage': false
+      'Js.Glueckstuebli:Supporter': false
 
 
 # Startseite
@@ -71,3 +72,13 @@
 'Js.Glueckstuebli:Supporter':
   superTypes:
     'Neos.Neos:Document': true
+  ui:
+    label: 'Unterstützer'
+    group: 'general'
+    icon: 'icon-life-ring'
+    inspector:
+      groups:
+        js:
+          label: 'Unterstützer-Daten'
+          icon: 'icon-anchor'
+          position: 1

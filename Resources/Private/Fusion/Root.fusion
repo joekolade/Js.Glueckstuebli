@@ -86,7 +86,7 @@ prototype(Neos.NodeTypes:Page.Document) {
 
                 intro_since2017 = '<b>Dabei seit 2017:</b> '
                 since2017 = Neos.Fusion:Collection {
-                    collection = ${q(site).find('[instanceof Neos.NodeTypes:Shortcut]').filter('[title*="2017"]')}
+                    collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2017"]')}
                     #.find('[instanceof Js.Glueckstuebli:Supporter]')}
                     itemName = 'supporter'
                     itemRenderer = ${'- ' + q(supporter).property('title') + ' / '}

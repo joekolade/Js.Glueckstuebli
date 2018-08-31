@@ -99,3 +99,13 @@
         label: 'in/auf der/...'
         inspector:
           group: 'supporter'
+
+# Supporter minilist
+
+'Js.Glueckstuebli:SupporterMiniList':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Unterstützer Miniliste'
+    group: 'general'
+    icon: 'icon-life-ring'

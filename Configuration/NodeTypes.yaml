@@ -90,6 +90,7 @@
       ui:
         label: 'in/auf der/...'
         inlineEditable: true
+        reloadIfChanged: TRUE
         inspector:
           group: 'supporter'
     'ort':
@@ -98,6 +99,7 @@
         label: 'Ortsbezeichnung'
         defaultValue: 'Ort hier eintragen'
         inlineEditable: true
+        reloadIfChanged: TRUE
         inspector:
           group: 'supporter'
     'website':
@@ -105,6 +107,8 @@
       ui:
         label: 'Website'
         placeHolder: 'Web-URL'
+        inlineEditable: true
+        reloadIfChanged: TRUE
         inspector:
           group: 'supporter'
 

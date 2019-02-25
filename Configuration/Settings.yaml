@@ -16,7 +16,7 @@ Neos:
     nodeTypes:
       groups:
         gluecksstuebli:
-          position: before general
+          position: 50
           collapsed: false
           label: 'Glücksstübli'
   Flow:

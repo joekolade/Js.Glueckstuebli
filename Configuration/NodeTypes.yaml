@@ -35,7 +35,7 @@
           '*': false
   ui:
     label: 'Start-Seite'
-    group: 'general'
+    group: 'gluecksstuebli'
     icon: 'icon-columns'
     inspector:
       groups:

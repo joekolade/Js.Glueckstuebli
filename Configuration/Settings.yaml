@@ -11,6 +11,14 @@ Neos:
             editorOptions:
               features:
                 resize: TRUE
+    eventLog:
+      enabled: TRUE
+    nodeTypes:
+      groups:
+        gluecksstuebli:
+          position: before general
+          collapsed: false
+          label: 'Glücksstübli'
   Flow:
     i18n:
       defaultLocale: de

@@ -80,7 +80,7 @@
     'Neos.Neos:Document': true
   ui:
     label: 'Unterstützer'
-    group: 'general'
+    group: 'gluecksstuebli'
     icon: 'icon-life-ring'
     inspector:
       groups:
@@ -132,7 +132,7 @@
     'Neos.Neos:Content': TRUE
   ui:
     label: 'Unterstützer Miniliste'
-    group: 'general'
+    group: 'gluecksstuebli'
     icon: 'icon-life-ring'
   properties:
     text:
@@ -222,5 +222,5 @@
     'Neos.Neos:Content': TRUE
   ui:
     label: 'Unterstützer Liste'
-    group: 'general'
+    group: 'gluecksstuebli'
     icon: 'icon-life-ring'

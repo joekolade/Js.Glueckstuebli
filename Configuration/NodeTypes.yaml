@@ -95,7 +95,6 @@
       type: string
       ui:
         label: 'Ortsbezeichnung'
-        defaultValue: 'Ort hier eintragen'
         reloadIfChanged: TRUE
         inspector:
           group: 'supporter'

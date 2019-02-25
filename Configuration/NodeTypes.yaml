@@ -102,7 +102,7 @@
       type: string
       ui:
         label: 'Website'
-        placeHolder: 'Web-URL'
+        #placeHolder: 'Web-URL'
         reloadIfChanged: TRUE
         inspector:
           group: 'supporter'

@@ -126,7 +126,7 @@
   properties:
     text:
       type: string
-      defaultValue: '... intro ...'
+      #defaultValue: '... intro ...'
       ui:
         inlineEditable: TRUE
         inline:
@@ -166,7 +166,7 @@
               a: true
     outro:
       type: string
-      defaultValue: '... Outro ...'
+      #defaultValue: '... Outro ...'
       ui:
         inlineEditable: TRUE
         inline:

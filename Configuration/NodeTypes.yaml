@@ -102,7 +102,6 @@
       type: string
       ui:
         label: 'Website'
-        #placeHolder: 'Web-URL'
         reloadIfChanged: TRUE
         inspector:
           group: 'supporter'
@@ -126,12 +125,10 @@
   properties:
     text:
       type: string
-      #defaultValue: '... intro ...'
       ui:
         inlineEditable: TRUE
         inline:
           editorOptions:
-            placeholder: i18n
             autoparagraph: true
             linking:
               anchor: true
@@ -166,12 +163,10 @@
               a: true
     outro:
       type: string
-      #defaultValue: '... Outro ...'
       ui:
         inlineEditable: TRUE
         inline:
           editorOptions:
-            placeholder: i18n
             autoparagraph: true
             linking:
               anchor: true

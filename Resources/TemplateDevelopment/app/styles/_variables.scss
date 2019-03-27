@@ -1,0 +1,21 @@
+$spacer: 1rem;
+
+$font-body: 'Lato', sans-serif;
+$font-header: 'Libre Baskerville', serif;
+
+$base-line-height: 1.6;
+
+$page-margin-top: 3*$spacer;
+
+$header-height: 9rem;
+$header-height-md: 11.5rem;
+$header-height-lg: 14rem;
+
+
+$rot: #e30010;
+$gruen: #8bc34a;
+$gelb: #beb928;
+
+$body-bg: rgba($gelb, 0.5);
+
+$text-color: darken($rot, 35%);

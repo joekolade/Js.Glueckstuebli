@@ -1,0 +1,26 @@
+// Loading animation (page etc)
+
+main {
+  background: white;
+
+  .loaded & {
+    background: $body-bg;
+  }
+
+  .content {
+    opacity: 0;
+    transition: .5s ease-in .2s;
+
+    .loaded & {
+      opacity: 1;
+    }
+  }
+  > header {
+    opacity: 0.1;
+    transition: .3s ease-in;
+
+    .loaded & {
+      opacity: 1;
+    }
+  }
+}

@@ -16,7 +16,7 @@
     },
     "extra": {
         "neos": {
-            "package-key": "Js.Glueckstuebli"
+            "package-key": "Js.Fleckli"
         },
         "applied-flow-migrations": [
             "TYPO3.FLOW3-201201261636",

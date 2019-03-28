@@ -8,7 +8,7 @@
     "suggest": {
         "typo3/neos-seo": "*"
     },
-    "name": "js/fleckli",
+    "name": "js/gluecksstuebli",
     "autoload": {
         "psr-0": {
             "Js\\Fleckli": "Classes/"

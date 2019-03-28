@@ -51,7 +51,17 @@
         <!--[if lt IE 10]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class=container>
+        <div class="wrapper">
+            <div class="container">
+                <a href="#" class="menu-toggle">
+                    <i class="fa fa-bars"></i> <span>Navigation</span>
+                </a>
+
+                <nav>
+                    {parts.menu -> f:format.raw()}
+                </nav>
+            </div>
+            <div class=container>
 
             <div class="mad-hatter">
                 {content.madhat -> f:format.raw()}
@@ -61,20 +71,40 @@
                 <h1>GlücksStübli</h1>
                 <p class=lead> <b>Schwarzwaldladen für das Besondere</b> </p>
             </div>
-            <nav class="menu">
-                {parts.menu -> f:format.raw()}
-            </nav>
             <div class="container content ledger">
                 {content.main -> f:format.raw()}
+                <br>
+                <p><a class="btn btn-primary" href=mailto:info@gluecksstuebli.de><i class="fa fa-envelope-o"></i> info@gluecksstuebli.de</a></p>
             </div>
 
-            <p><a class="btn btn-primary" href=mailto:info@gluecksstuebli.de><i class="fa fa-envelope-o"></i> info@gluecksstuebli.de</a></p>
 
             <div class="footer">
                 <p>
                     {content.claim -> f:format.raw()}
                     <br class="hidden-md-up">
-                    GlücksStübli – Schwarzwaldladen mit <i class="fa fa-heart text-primary"></i></p>
+                    GlücksStübli – Schwarzwaldladen mit <i class="fa fa-heart text-primary"></i>
+                    &#124; <a href="{content.impressum}" rel="nofollow">Impressum</a>
+                    &#124; <a href="{content.datenschutz}" rel="nofollow">Datenschutz</a>
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div class=mobile-menu>
+            <div class=menu-background style="cursor: pointer"></div>
+            <div class=app-menu-container>
+                <div class=app-menu>
+                    <div class=top>
+                        <div class="top-overlay logo-wrapper">
+                            <a href="/" title="zurück zur Startseite" rel="nofollow">{svglogo -> f:format.raw()}</a>
+                        </div>
+                    </div>
+                    <div class=bottom>
+
+                        {parts.mobilemenu -> f:format.raw()}
+
+                    </div>
+                </div>
             </div>
         </div>
     </f:section>

@@ -1,0 +1,16 @@
+prototype(Js.Glueckstuebli:SupporterList) < prototype(Neos.Neos:Content) {
+    supporterList = Neos.Fusion:Array {
+        list = Neos.Fusion:Collection {
+            collection = ${q(site).find('[instanceof Js.Glueckstuebli:Supporter]')}
+            itemName = 'supporter'
+            itemRenderer = Neos.Fusion:Template {
+                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/SupporterListItem.html'
+                supporter = ${supporter}
+                title = ${q(supporter).property('title')}
+                place = ${q(supporter).property('ortprefix') + ' ' + q(supporter).property('ort')}
+                website = ${q(supporter).property('website')}
+            }
+
+        }
+    }
+}

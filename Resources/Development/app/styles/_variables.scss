@@ -1,0 +1,33 @@
+//
+// variables
+//
+
+// Colors
+//
+
+$color-black: black;
+$color-red: #A71C28;
+$color-red: #e30010;
+// $color-cream: #f7e9c2;
+$color-cream: lighten(#F8F2C4, 5%);
+
+$brand-primary: $color-red;
+$primary: $color-red;
+$link-color: $color-black;
+
+$body-color: $color-red;
+$jumbotron-bg: $color-cream;
+$btn-primary-color: $color-black;
+$btn-primary-color: $color-cream;
+
+// Fonts
+//
+
+// $font-family-base: 'Ledger', cursive;
+$font-family-base: 'Dancing Script', cursive;
+$headings-font-family: 'Dancing Script', cursive;
+$lead-font-weight: 700;
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;

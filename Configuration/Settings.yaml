@@ -11,7 +11,17 @@ Neos:
             editorOptions:
               features:
                 resize: TRUE
-
+    eventLog:
+      enabled: TRUE
+    nodeTypes:
+      groups:
+        gluecksstuebli:
+          position: 50
+          collapsed: false
+          label: 'Glücksstübli'
+  Flow:
+    i18n:
+      defaultLocale: de
 Js:
   Fleckli:
     claim: Wer alle Lebewesen lachen hört, kann Wolken schmecken!

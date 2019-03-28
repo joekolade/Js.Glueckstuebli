@@ -1,20 +1,17 @@
-# If you need more than just the "main" content area you can uncomment the snippet below. It will add a "sidebar" area
-# to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
-# Template are visible on your page.
----
-#'Neos.NodeTypes:Page':
-#  childNodes:
-#    'sidebar':
-#      type: 'Neos.Neos:ContentCollection'
-
+# Shortcut
+'Neos.Neos:Shortcut':
+  constraints:
+    nodeTypes:
+      'Js.Glueckstuebli:Supporter': true
+      'Js.Glueckstuebli:StartPage': false
 
 # Page
 'Neos.NodeTypes:Page':
   constraints:
     nodeTypes:
       'Neos.NodeTypes:Page': true
+      'Js.Glueckstuebli:Supporter': false
       'Js.Glueckstuebli:StartPage': false
-
 
 # Startseite
 'Js.Glueckstuebli:StartPage':
@@ -23,6 +20,7 @@
   constraints:
     nodeTypes:
       'Neos.NodeTypes:Page': true
+      'Js.Glueckstuebli:Supporter': false
       'Js.Glueckstuebli:StartPage': false
   childNodes:
     'intro':
@@ -37,7 +35,7 @@
           '*': false
   ui:
     label: 'Start-Seite'
-    group: 'general'
+    group: 'gluecksstuebli'
     icon: 'icon-columns'
     inspector:
       groups:
@@ -66,3 +64,149 @@
         label: 'Piwik Site-Id'
         inspector:
           group: 'js'
+
+# Unterstützer
+'Js.Glueckstuebli:Supporter':
+  superTypes:
+    'Neos.Neos:Document': true
+  ui:
+    label: 'Unterstützer'
+    group: 'gluecksstuebli'
+    icon: 'icon-life-ring'
+    inspector:
+      groups:
+        supporter:
+          label: 'Unterstützer-Daten'
+          icon: 'icon-life-ring'
+          position: 1
+  properties:
+    'title':
+      ui:
+        inlineEditable: true
+    'ortprefix':
+      type: string
+      defaultValue: 'in'
+      ui:
+        label: 'in/auf der/...'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'supporter'
+    'ort':
+      type: string
+      ui:
+        label: 'Ortsbezeichnung'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'supporter'
+    'website':
+      type: string
+      ui:
+        label: 'Website'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'supporter'
+    showinminilist:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Zeige in Miniliste?'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'supporter'
+
+# Supporter minilist
+'Js.Glueckstuebli:SupporterMiniList':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Unterstützer Miniliste'
+    group: 'gluecksstuebli'
+    icon: 'icon-life-ring'
+  properties:
+    text:
+      type: string
+      ui:
+        inlineEditable: TRUE
+        inline:
+          editorOptions:
+            placeholder: i18n
+            autoparagraph: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: false
+              sub: false
+              sup: false
+              del: false
+              p: true
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: false
+              h6: false
+              pre: false
+              underline: false
+              strikethrough: false
+              removeFormat: false
+              left: false
+              right: false
+              center: false
+              justify: false
+              table: false
+              ol: false
+              ul: false
+              a: true
+    outro:
+      type: string
+      ui:
+        inlineEditable: TRUE
+        inline:
+          editorOptions:
+            placeholder: i18n
+            autoparagraph: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: false
+              sub: false
+              sup: false
+              del: false
+              p: true
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: false
+              h6: false
+              pre: false
+              underline: false
+              strikethrough: false
+              removeFormat: false
+              left: false
+              right: false
+              center: false
+              justify: false
+              table: false
+              ol: false
+              ul: false
+              a: true
+
+# Supporter List
+'Js.Glueckstuebli:SupporterList':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Unterstützer Liste'
+    group: 'gluecksstuebli'
+    icon: 'icon-life-ring'

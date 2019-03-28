@@ -1,0 +1,25 @@
+
+
+
+prototype(Js.Glueckstuebli:SupporterMiniList) < prototype(Neos.Neos:Content) {
+    supporter = Neos.Fusion:Array {
+
+        intro_since2017 = '<p><b>Dabei seit 2017:</b> '
+        since2017 = Neos.Fusion:Collection {
+            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2017"]').find('[instanceof Js.Glueckstuebli:Supporter][showinminilist]')}
+            itemName = 'supporter'
+            itemRenderer = ${q(supporter).property('title') + ' / '}
+        }
+
+        break = '</p><p>'
+
+        intro_since2018 = '<b>Dabei seit 2018:</b> '
+        since2018 = Neos.Fusion:Collection {
+            collection = ${q(site).find('[instanceof Neos.Neos:Shortcut]').filter('[title*="2018"]').find('[instanceof Js.Glueckstuebli:Supporter][showinminilist]')}
+            itemName = 'supporter'
+            itemRenderer = ${q(supporter).property('title') + ' / '}
+        }
+
+        end = '</p>'
+    }
+}

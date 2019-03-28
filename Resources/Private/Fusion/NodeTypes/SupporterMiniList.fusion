@@ -1,6 +1,3 @@
-
-
-
 prototype(Js.Glueckstuebli:SupporterMiniList) < prototype(Neos.Neos:Content) {
     supporter = Neos.Fusion:Array {
 

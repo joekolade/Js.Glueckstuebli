@@ -1,4 +1,4 @@
-prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Document) {
+prototype(Js.Glueckstuebli:Supporter.Document) < prototype(Neos.Neos:Document) {
     templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Supporter.html'
     title = ${q(node).property('title')}
     ortprefix = ${q(node).property('ortprefix')}

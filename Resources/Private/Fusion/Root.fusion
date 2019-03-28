@@ -19,10 +19,8 @@ root {
     }
 }
 
-prototype(Neos.NodeTypes:Page.Document) < prototype(Page)
-prototype(Neos.NodeTypes:Page.Document) {
-//page = Page
-//page {
+prototype(Neos.NodeTypes:Page.Document) >
+prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
     head {
 
         meta = Neos.Fusion:Template {

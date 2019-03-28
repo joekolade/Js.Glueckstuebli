@@ -1,0 +1,14 @@
+prototype(Js.Glueckstuebli:StartPage.Document) < prototype(Neos.NodeTypes:Page.Document)
+prototype(Js.Glueckstuebli:StartPage.Document) {
+    head {
+        meta.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
+        stylesheets.site.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
+    }
+
+    body {
+        templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
+        #parts.menu >
+
+        javascripts.site.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
+    }
+}

@@ -2,10 +2,6 @@
  * Root TypoScript template for the Glückstübli site
  */
 
-## Include all .fusion files in NodeTypes
-include: NodeTypes/*
-
-
 root {
 //    default {
 //        type = ${q(node).property('_nodeType') + '.Document'}
@@ -19,96 +15,5 @@ root {
     }
 }
 
-prototype(Neos.NodeTypes:Page.Document) >
-prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
-    head {
 
-        meta = Neos.Fusion:Template {
-            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-            sectionName = 'meta'
-
-            #@position.before = "stylesheets"
-        }
-
-        stylesheets.site = Neos.Fusion:Template {
-            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-            sectionName = 'stylesheets'
-        }
-
-        # javascripts.site = Neos.Fusion:Template {
-        # 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
-        # 	sectionName = 'headScripts'
-        # }
-    }
-
-    body {
-        templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-        sectionName = 'body'
-
-
-        parts {
-            claim = ${q(site).property('claim')}
-            email = ${q(site).property('email')}
-
-            menu = Neos.Neos:Menu {
-                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/Menu.html'
-                #entryLevel = 2
-                maximumLevels = 1
-                attributes {
-                    class= "nav"
-                }
-            }
-
-            mobilemenu = Neos.Neos:Menu {
-                templatePath = 'resource://Js.Glueckstuebli/Private/Templates/FusionObjects/MobileMenu.html'
-                maximumLevels = 3
-
-                attributes {
-                    class = "nav flex-column"
-                }
-            }
-        }
-
-        svglogo = "<a href='/'><h1>GlücksStübli</h1></a>"
-
-        // These are your content areas, you can define as many as you want, just name them and the nodePath.
-        content {
-            madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
-            claim = ${Configuration.setting('Js.Glueckstuebli.claim')}
-
-            // The default content section
-            main = Neos.Neos:PrimaryContent {
-                nodePath = 'main'
-            }
-
-            impressum = Neos.Neos:NodeUri {
-                node = ${q(site).children('[uriPathSegment="service"]').get(0)}
-            }
-
-            datenschutz = Neos.Neos:NodeUri {
-                node = ${q(site).children('[uriPathSegment="service"]').get(1)}
-            }
-        }
-
-        javascripts.site = Neos.Fusion:Template {
-            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
-            sectionName = 'bodyScripts'
-        }
-    }
-}
-
-prototype(Js.Glueckstuebli:StartPage.Document) < prototype(Neos.NodeTypes:Page.Document)
-prototype(Js.Glueckstuebli:StartPage.Document) {
-    head {
-        meta.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
-        stylesheets.site.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
-    }
-
-    body {
-        templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
-        #parts.menu >
-
-        javascripts.site.templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/StartPage.html'
-    }
-}
-
+include: 'NodeTypes/**/*';

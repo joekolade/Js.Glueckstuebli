@@ -1,0 +1,52 @@
+prototype(Neos.NodeTypes:Page.Document) >
+prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
+
+    head {
+
+        meta = Neos.Fusion:Template {
+            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+            sectionName = 'meta'
+
+            #@position.before = "stylesheets"
+        }
+
+        stylesheets.site = Neos.Fusion:Template {
+            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+            sectionName = 'stylesheets'
+        }
+
+        # javascripts.site = Neos.Fusion:Template {
+        # 	templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Vika.html'
+        # 	sectionName = 'headScripts'
+        # }
+    }
+
+    body {
+        templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+        sectionName = 'body'
+
+
+        parts {
+            claim = ${q(site).property('claim')}
+            email = ${q(site).property('email')}
+            # 	menu = Neos.Neos:Menu
+        }
+
+        // These are your content areas, you can define as many as you want, just name them and the nodePath.
+        content {
+            madhat = ${Configuration.setting('Js.Glueckstuebli.madhat')}
+            claim = ${Configuration.setting('Js.Glueckstuebli.claim')}
+
+            // The default content section
+            main = Neos.Neos:PrimaryContent {
+                nodePath = 'main'
+            }
+
+        }
+
+        javascripts.site = Neos.Fusion:Template {
+            templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
+            sectionName = 'bodyScripts'
+        }
+    }
+}

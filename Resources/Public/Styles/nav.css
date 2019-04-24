@@ -4,3 +4,7 @@ nav ul {
     margin-left: 0;
     padding-left: 0;
 }
+ul li.active a,
+ul li.current a {
+    color: #e30010;
+}

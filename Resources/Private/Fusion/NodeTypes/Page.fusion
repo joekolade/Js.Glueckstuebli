@@ -25,6 +25,7 @@ prototype(Neos.NodeTypes:Page.Document) < prototype(Neos.Neos:Page) {
         templatePath = 'resource://Js.Glueckstuebli/Private/Templates/Page/Page.html'
         sectionName = 'body'
 
+        svglogo = ""
 
         parts {
             claim = ${q(site).property('claim')}
